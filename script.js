@@ -2,7 +2,7 @@
     const apiKey = '64c4c4cc93f3761cfa9d80b9637e1c06';
     
 
-    function getWetherInfo(currentLoc){
+    function getWeatherInfo(currentLoc){
         // api.openweathermap.org/data/2.5/weather?q={current location}&appid={your api key}
     const url = `${apiBase}?q=${currentLoc}&appid=${apiKey}`;
         fetch(url)
@@ -17,7 +17,7 @@
     serachBtn.addEventListener("click", function(){
         //console.log("click")
         const city = document.getElementById("city").value;
-        getWetherInfo(city);
+        getWeatherInfo(city);
     })
 
     function getData(data){
@@ -28,4 +28,4 @@
         document.getElementById("city").value = "";
     }
 
-getWetherInfo("New York");
+getWeatherInfo("New York");
