@@ -8,7 +8,7 @@
         fetch(url)
             .then(response => response.json())
             .then(data => 
-              //console.log(data))
+            //console.log(data))
              getData(data))
             
             
@@ -24,6 +24,7 @@
         document.getElementById("show_city").innerText = data.name;
         document.getElementById("show_temperature").innerText = data.main.temp;
         document.getElementById("weather_status").innerText = data.weather[0].description;
+        document.getElementById("speed").innerText = data.wind.speed;
         document.getElementById('icon').setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
         document.getElementById("city").value = "";
     }
